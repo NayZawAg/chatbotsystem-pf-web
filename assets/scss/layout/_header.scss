@@ -1,0 +1,409 @@
+.header {
+  @media screen and (max-width: 991px) {
+    position: relative;
+    z-index: 1200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-logo {
+    padding: 20px 0;
+    display: inline-block;
+    float: left;
+    @media screen and (max-width: 991px) {
+      height: 100%;
+      padding: 10px 0;
+    }
+    &__image {
+      height: 50%;
+      vertical-align: bottom;
+    }
+    &__mobile {
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+    &__desktop {
+      display: none;
+      @media (min-width: 992px) {
+        display: block;
+      }
+    }
+  }
+
+  &-wh {
+    background-color: $white;
+    .header-logo {
+      &__mobile {
+        display: none;
+        @media (min-width: 992px) {
+          display: none;
+        }
+      }
+      &__desktop {
+        display: block;
+        @media (min-width: 992px) {
+          display: block;
+        }
+      }
+
+    }
+  }
+
+  
+
+}
+
+
+.l-dropdown-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.shutai_wrapper{
+  height: 140px;
+  text-align: center;
+}
+.shutai_logo{
+  padding:10px;
+}
+.l-container-header{
+  padding-top: 30px;
+}
+
+
+// ============================ //
+// 言語選択 //
+// ============================ //
+.header-language {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  background-color: $red-vivid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0;
+  z-index: 10000000;
+
+  &__img {
+    display: block;
+    width: 40px;
+    margin: 10px auto 5px;
+    cursor: pointer;
+
+  }
+  &__list {
+    position: relative;
+    z-index: 1000000;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    text-align: center;
+    display: none;
+    &:first-child {
+      display: block;
+    }
+    &.open {
+      display: block;
+    }
+    &.open .header-language__selected {
+      display: none;
+    }
+  }
+  &__selected {
+    display: block;
+    color: $white;
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+  &__link {
+    display: block;
+    color: $white;
+    padding: 5px 10px;
+    margin: 5px 0;
+    &:hover {
+      background-color: $white;
+      color: $red-vivid;
+      text-decoration: none;
+      opacity: 1;
+    }
+
+  }
+
+
+
+}
+
+// ============================ //
+// PC時メニュー //
+// ============================ //
+.header-menu {
+  float: right;
+  margin-top: 30px;
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+  }
+  &__list {
+    list-style: none;
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+  }
+  &__item {
+    display: inline-block;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '|';
+      display: inline-block;
+      color: $black;
+    }
+    &:nth-of-type(3) {
+      &::after {
+        display: none;
+      }
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    vertical-align: middle;
+    padding: 0 15px;
+    color: $black;
+    text-decoration: none;
+    font-size: 16px;
+    @media (min-width: 992px) {
+      font-size: 18px;
+    }
+    &.active::after {
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+      
+    }
+
+    &-business {
+      color: $white;
+      background-color: $red-vivid;
+      padding: 12px 36px;
+      border-radius: 24px;
+      border: 1px solid $red-vivid;
+      &:hover {
+        color: $red-vivid;
+        background-color: $white;
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+
+
+// ============================ //
+// ハンバーガーメニュー //
+// ============================ //
+.header-hamburger {
+  position: absolute;
+  right: 0px;
+  z-index: 1200;
+  background-color: $red-vivid;
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  &__menu {
+    display: block;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    width: 70px;
+    height: 65px;
+    padding: 10px;
+    z-index: 1200;
+    background-color: transparent;
+    span {
+      display: inline-block;
+      transition: all .4s;
+      position: absolute;
+      left: 15px;
+      width: 40px;
+      height: 4px;
+      background-color: $white;
+      border-radius: 0;
+      &:nth-of-type(1) {
+        top: 15px;
+      }
+      &:nth-of-type(2) {
+        top: 30px;
+      }
+      &:nth-of-type(3) {
+        bottom: 15px;
+      }
+    }
+    
+  }
+}
+
+// ============================ //
+// ハンバーガーメニュー active時 //
+// ============================ //
+.header-hamburger__menu-normal {
+  &.active {
+    span {
+      &:nth-of-type(1) {
+        -webkit-transform: translateY(15px) rotate(-45deg);
+        transform: translateY(15px) rotate(-45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:nth-of-type(3) {
+        -webkit-transform: translateY(-15px) rotate(45deg);
+        transform: translateY(-15px) rotate(45deg);
+      }
+    }
+  }
+}
+
+
+// ============================ //
+// スマホメニュー ナビゲーション //
+// ============================ //
+.dropdown-menu {
+  position: fixed;
+  list-style: none;
+  background-color: $bg-gray;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  z-index: 10000;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  &__list {
+    margin: 0;
+  }
+  &__item {
+
+  }
+  &__link {
+    color: $black;
+    display: block;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #979797;
+    @include transition;
+    &:hover {
+      background-color: $red-vivid;
+      color: $white;
+      opacity: 1;
+      text-decoration: none;
+      @include transition;
+
+    }
+  }
+
+}
+
+.check-cookie {
+  background-color: #F6F6F6;
+  font-size: 1.2rem;
+//  height: 100px;
+  padding: 20px;
+  .check-cookie_btn-area {    
+    text-align: right;
+  }
+  .check-cookie_text {
+    margin: 0;
+    a {
+      color: #212529;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.btn-cookie-save {
+  display: block;
+  width: 360px;
+  margin: 0 auto;
+  text-align: center;
+  color: $white;
+  background-color: $black-vivid;
+  padding: 12px;
+  border: 1px solid $black;
+  font-size: 12px;
+  &-arrow {
+    position: relative;
+    bottom: 2px;
+    left: 10px;
+  }
+}
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+.modal-header {
+  display: block;
+  .modal-subtitle {
+    color: $red;
+    @media (min-width: 737px) {
+      font-size: 24px;
+    }
+    @media (max-width: 737px) {
+      font-size: 16px;
+    }
+    @media (max-width: 320px) {
+      font-size: 10px;
+    }
+  }
+  .modal-title {
+    color: $red;
+    font-size: 42px;
+  }
+}
+
+
+.modal-body {
+  margin-top: 20px;
+  h5 {
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+  }
+}
+
+.modal-footer {
+  padding-top: 30px;
+}
+
+.cookie-modal {
+  font-size: 1.2rem;
+  .cookie-modal-content {
+    padding: 30px 50px 30px 50px;
+  }
+}
+

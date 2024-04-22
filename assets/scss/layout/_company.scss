@@ -1,0 +1,15 @@
+.mainCompany {
+  &-content {
+    &__banner {
+      max-width: 580px;
+      margin: 30px auto;
+      &-deloitte,
+      &-meti {
+        width: 50%;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

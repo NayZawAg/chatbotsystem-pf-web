@@ -1,0 +1,115 @@
+
+.opf_structure_title_jp{
+  color:white;
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+}
+.opf_structure_title_en{
+  color: white;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+}
+.opf_structure_title_jp1{
+  text-align: center;
+  float:left;
+  margin-top:-8%;
+  margin-left:8%
+}
+.opf_structure_title_jp2{
+  text-align: center;
+  float:right;
+  margin-top:-8%;
+  margin-right:10%
+}
+.opf_structure_title_en1{
+  text-align: center;
+  float: left;
+  margin-top: -9%;
+  margin-left: 10%;
+}
+.opf_structure_title_en2{
+  text-align: center;
+  float: right;
+  margin-top: -9%;
+  margin-right: 10%;
+}
+.opf_future_title{
+  top: 60% !important;
+  left:39%;
+  text-align: center;
+  color:white;
+  margin-top:15px;
+}
+.opf_future_title_1{
+  font-size: 1vw !important;
+}
+.opf_future_title_2{
+  font-size: 0.6vw !important;
+}
+
+
+@media screen and (max-width: 480px){
+  .opf_future_title{
+    left:18%;
+    text-align: center;
+    color:white;
+    margin-top:-10%;
+  }
+  .opf_future_title_1{
+    font-size: 17px !important;
+  }
+  .opf_future_title_2{
+    font-size: 14px !important;
+  }
+  .opf_structure_title_jp{
+    color:white;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .opf_structure_title_en{
+    color: white;
+    position: relative;
+    font-size: 9px;
+    font-weight: bold;
+  }
+  .opf_structure_title_jp1{
+    text-align: center;
+    float:left;
+    margin-top:-11%;
+    margin-left:8%
+  }
+  .opf_structure_title_jp2{
+    text-align: center;
+    float:right;
+    margin-top:-11%;
+    margin-right:9%
+  }
+  .opf_structure_title_en1{
+    text-align: center;
+    float:left;
+    margin-top:-13%;
+    margin-left:8%
+  }
+  .opf_structure_title_en2{
+    text-align: center;
+    float:right;
+    margin-top:-13%;
+    margin-right:7%
+  }
+  .page-title p{
+    font-size: 1rem;
+  }
+  .l-dropdown-menu .dropdown-menu__link{
+    font-size: 1.3rem;
+  }
+  .colorbox{
+    width: 70px !important;
+    font-size: 0.9rem;
+  }
+  .servlist p{
+    font-size: 7px;
+  }
+}

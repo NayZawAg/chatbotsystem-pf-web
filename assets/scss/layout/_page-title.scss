@@ -1,0 +1,67 @@
+.section3 {
+  .page-title {
+    padding: 100px 0;
+    background-image: url("../images/photoBG_functionEC_PC.png");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+
+.page-title {
+  padding: 100px 0;
+  background-image: url("../images/photoBG_mainEC_PC.png");
+  background-size: cover;
+  background-position: center center;
+  .banner-txt {
+    padding: 0px 15%;
+    color: $white;
+  }
+
+  h2 {
+    font-size: 4.0rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    strong {
+      font-size: 5.0rem;
+    }
+  }
+
+  p {
+    line-height: 2.5rem;
+    font-weight: bold;
+  }
+
+
+}
+
+
+@media screen and (max-width: 991px) {
+  .page-title {
+    margin-top: 15px;
+    padding: 85px 0;
+    background-image: url("/assets/images/photoBG_mainEC_SP.png");
+  }
+  .section3 .page-title{
+    margin-top: 15px;
+    padding: 85px 0;
+    background-image: url("/assets/images/photoBG_functionEC_SP.png");
+  }
+  .page-title h2{
+    font-size: 2.5rem;
+  }
+  .page-title .banner-txt{
+    padding: 0px;
+  }
+  .page-title .language{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    display: block;
+  }
+  .page-title .language img{
+    width: 70px;
+  }
+
+}

@@ -1,0 +1,150 @@
+@import 'colors';
+@import '../base/mixin';
+
+button {
+  background: none;
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  color: $white;
+  background: $primary;
+  padding: 6px 12px;
+  text-decoration: underline; 
+}
+
+.btn-box {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.btn-solid {
+  padding: 4px 8px;
+  background: $primary;
+  color: $white;
+  @media (min-width: 768px) {
+    font-size: 1.2em;
+    padding: 6px 12px;
+  }
+}
+
+.btn-outlined {
+  font-weight: 500;
+  padding: 4px 8px;
+  background: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+  @include transition;
+  &:hover {
+    background: $primary;
+    color: $white;
+    border-color: $white;
+    text-decoration: none;
+    @include transition;
+  }
+  @media (min-width: 600px) {
+    font-size: 1.2em;
+    padding: 6px 12px;
+  }
+}
+
+.btn-cookie {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1A1A1A;
+    border: 1px solid #464646;
+}
+
+.btn-belt {
+  position: relative;
+  z-index: 1000;
+  color: $primary;
+  &::after {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    background: $secondary;
+    height: 30%;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    content: '';
+    @include transition;
+  }
+
+  &:hover {
+    text-decoration: none;
+    &::after {
+      @include transition;
+      width: 130%;
+      height: 10%;
+    }
+  }
+
+}
+
+
+#panel-btn{
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 10px;
+  border-radius: 50%;
+  background: $white;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+#panel-btn:hover{
+  background: #fafafa;
+}
+#panel-btn-icon{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 22px;
+  height: 1px;
+  margin: 0 auto;
+  background: $primary;
+  transition: .2s;
+}
+#panel-btn-icon:before, #panel-btn-icon:after{
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 14px;
+  height: 1px;
+  background: $primary;
+  transition: .3s;
+}
+#panel-btn-icon:before{
+  margin-top: -6px;
+}
+#panel-btn-icon:after{
+  margin-top: 4px;
+}
+#panel-btn .close{
+  background: transparent;
+}
+#panel-btn .close:before, #panel-btn .close:after{
+  margin-top: 0;
+}
+#panel-btn .close:before{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+#panel-btn .close:after{
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+

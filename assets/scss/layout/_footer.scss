@@ -1,0 +1,132 @@
+footer {
+  .footer-breadList {
+    background-color: $white;
+    .footer-breadList__container {
+      @include containerlg;
+      padding: 10px 10px 0 10px;
+    }
+    &__list {
+    }
+
+    &__item {
+      margin-left: 40px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: ' ';
+        background: url('/assets/images/breadcrumb.png') no-repeat;
+        color: $gray;
+        top: 0;
+        left: -20px;
+        font-size: inherit;
+        width: 12px;
+        height: 17px
+      }
+      &:first-child {
+        margin-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &__link {
+      color: $black;
+      &-img {
+        height: 30px;
+      }
+    }
+  }
+
+  .footer-businessLink {
+    background-color: $bg-red;
+    .footer-businessLink__container {
+      @include container;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    &__btn {
+      color: $white;
+      border: 1px solid $white;
+      max-width: 440px;
+      text-align: center;
+      padding: 25px 60px;
+      @include transition;
+      @media (min-width: 420px) {
+        padding: 25px 90px;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $bg-red;
+        background-color: $white;
+        opacity: 1;
+        @include transition;
+      }
+      img {
+        height: 2.0rem;
+      }
+    }
+  }
+
+  .footer-nav {
+    background-color: $bg-black;
+    .footer-nav__container {
+      @include container;
+      padding: 60px 0;
+    }
+    &__list {
+      @media (min-width: 768px) {
+        text-align: center;
+      }
+    }
+    &__item {
+      margin-bottom: 30px;
+      @media (min-width: 768px) {
+        margin: 3px 5px;
+      }
+    }
+    &__link {
+      color: $white;
+      img {
+        max-width: 26px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .footer-logo {
+    background-color: $bg-black;
+    border-top: 1px solid $gray;
+    .footer-logo__container {
+      @include container;
+      padding: 60px 0;
+      text-align: center;
+    }
+    &__link {
+      @include transition;
+      &:hover {
+        @include transition;
+        opacity: 0.7;
+      }
+      img {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+}
+
+.pageTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  margin: 0;
+  z-index: 99999;
+}
+.to_top{
+  bottom: 0px;
+  opacity: 1;
+  right: 0;
+  bottom: 0;
+}

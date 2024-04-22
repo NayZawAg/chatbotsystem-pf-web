@@ -1,0 +1,46 @@
+.main {
+  background-color: $bg-gray;
+  padding-top: calc( 65px + 60px ); // header height 65px;
+  padding-bottom: 60px;
+  .main-heading {
+    @include container;
+    margin-bottom: 60px;
+    &__title {
+      font-size: 36px;
+      font-weight: 700;
+      color: $black;
+
+      @media (min-width: 768px) {
+        &-en {
+          font-size: 84px;
+        }
+      }
+      @media (max-width: 767px) {
+        &-en {
+          font-size: 45px;
+        }
+      }
+      @media (max-width: 374px) {
+        &-en {
+          font-size: 37px;
+        }
+      }
+      &-jp {
+        font-size: 36px;
+      }
+      &-red {
+        color: $red;
+      }
+    }
+  }
+
+  .main-container {
+    @include container;
+    background-color: $white;
+  }
+
+  .main-content {
+    padding: 40px;
+  }
+}
+

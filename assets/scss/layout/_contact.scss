@@ -1,0 +1,102 @@
+.main.mainContact {
+  .main-ccontainer {
+    @media (min-width: 768px) {
+      max-width: 600px;
+    }
+  } 
+}
+
+.contactUserForm {
+  &-item {
+    margin-bottom: 20px;
+    input,
+    textarea {
+      padding: 4px 8px;
+      font-size: 16px;
+      max-width: 100%;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      display: block;
+    }
+    textarea {
+      width: 100%;
+    }
+    input[type="checkbox"] {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .contactUserForm-privacy__label {
+      display: inline-block;
+      
+    }
+    input[type="submit"] {
+      padding: 8px 16px;
+      color: $white;
+      background-color: $bg-gray;
+      border: 1px solid $bg-gray;
+      &.active {
+        color: $white;
+        background-color: $red-vivid;
+        border: 1px solid $red-vivid;
+        cursor: pointer;
+        &:hover {
+          color: $red-vivid;
+          background-color: $white;
+          opacity: 1;
+        }
+      }
+      
+    }
+  }
+  &-privacy {
+    &__link {
+      width: 100%;
+      a {
+        color: $red-vivid;
+      }
+    }
+  }
+}
+
+.mainContactComplete {
+  &-content {
+    p {
+      font-size: 16px;
+    }
+    &__link {
+      color: $black;
+      background-color: transparent;
+      border: 1px solid $red-vivid;
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin-top: 30px;
+      &:hover {
+        color: $white;
+        background-color: $red-vivid;
+        text-decoration: none;
+        opacity: 1;
+
+      }
+      &-arrow {
+        display: inline-block;
+        color: $black-vivid;
+        background-color: $bg-gray;
+        padding: 0 6px;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.require_mark {
+  color: $red-vivid;
+}
+
+.agreement {
+  width: 100%;
+  blockquote {
+    margin-left: 20px;
+  }
+}

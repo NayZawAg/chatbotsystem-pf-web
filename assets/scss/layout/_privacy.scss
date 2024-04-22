@@ -1,0 +1,75 @@
+.mainPrivacy {
+  .privacy-header {
+    h2 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .privacy-content {
+    a {
+        color: #212529;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    &-subtitle {
+      text-decoration: underline;
+    }
+    .logo-color {
+      color: orange;
+    }
+    &-text {
+      margin-left: 20px;
+      word-break: break-all;
+    }
+    ol {
+      margin-left: 60px;
+      list-style-type: decimal;
+      .pirvacy-content-paragraph-title {
+         margin-top: 26px;
+         margin-bottom: 12px;
+      }
+    }
+    .privacy_list {
+      margin-left: 18px;
+    }
+    &-lastmessage {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  ul  {
+    position: relative;
+    margin:0;
+    padding:0;
+  }
+
+  ul li  {
+    list-style: none;
+    list-style-position:outside;
+    margin:0;
+    padding-left:1.25em;
+  }
+  ul li span {
+    position: absolute;
+    left: 0;
+    margin:0;
+  }
+
+  .list-style {
+    position: static;
+    margin-left: 40px;
+  }
+  .list-style li {
+    list-style: disc;
+    list-style-position: inherit;
+  }
+  .list-style li.list-content {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+
+}
+
